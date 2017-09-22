@@ -25,7 +25,7 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <button>Ргеистрация</button>
+                        <asp:Button runat="server" Text="Регистрация"/>
                     </td>
                 </tr>
             </table>
