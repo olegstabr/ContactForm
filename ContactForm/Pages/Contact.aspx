@@ -2,14 +2,16 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head runat="server">
     <title>Главная</title>
     
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="~/css/materialize.css" />
     <link rel="stylesheet" href="~/css/style.css" />
-
+    
+    <!-- Import jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="~/js/materialize.min.js"></script>
           
@@ -31,39 +33,38 @@
                 <main>
                     <center>
                         <div class="container">
-                            <div  class="z-depth-3 y-depth-3 x-depth-3 grey black-text lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px; margin-top: 100px;">    
+                            <div  class="z-depth-3 y-depth-3 x-depth-3 grey black-text lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px; margin-top: 0;">    
                                 <div class="section"><i class="mdi-alert-error red-text"></i></div>
                                 <h3>Авторизация</h3>
-                                <div class='row'>
-                                    <div class='input-field col s12'>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <asp:Label runat="server" style="float: left; font-weight: bold">Логин</asp:Label>
                                         <asp:TextBox runat="server" ID="loginTextBox" ClientIDMode="Static"></asp:TextBox>
-                                        <label for="loginTextBox">Логин</label>
                                     </div>
                                 </div>
-                                <div class='row'>
-                                    <div class='input-field col m12'>
+                                <div class="row">
+                                    <div class="input-field col m12">
+                                        <asp:Label runat="server" style="float: left; font-weight: bold">Пароль</asp:Label>
                                         <asp:TextBox runat="server" ID="passwordTextBox" ClientIDMode="Static" TextMode="Password"></asp:TextBox>
-                                        <label for="passwordTextBox">Пароль</label>
                                     </div>
-                                    <label style='float: right;'>
+                                    <label style="float: right;">
                                         <a><b style="color: #F5F5F5;">Forgot Password?</b></a>
                                     </label>
                                 </div>
                                 <br/>
                                 <center>
-                                    <div class='row'>
+                                    <div class="row">
                                         <asp:Button runat="server" Text="Войти" ID="loginButton" class="btn waves-effect waves-light" />
                                     </div>
                                 </center>
      
                             </div>
+                            <p align="center">© 2017 Лабораторная работа №1 | Киселева Л., Стабровский О.</p>
                         </div>
                     </center>
                 </main>
             </div>
         </div>
     </form>
-    <hr/>
-    <p align="center">Copyright © 2017 Лабораторная работа №1 | Киселева Л., Стабровский О.</p>
 </body>
 </html>

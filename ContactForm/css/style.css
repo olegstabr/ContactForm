@@ -1,11 +1,18 @@
-﻿ body {
-     display: flex;
-     min-height: 100vh;
-     flex-direction: column;
- }
+﻿body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background: #fff;
+}
  main {
      flex: 1 0 auto;
  }
- body {
-     background: #fff;
- }
+
+.container {
+    font-family: 'Roboto';
+    width: 600px;
+    margin: 30px auto 0;
+    display: block;
+    background: #FFF;
+    padding: 10px 50px 50px;
+}

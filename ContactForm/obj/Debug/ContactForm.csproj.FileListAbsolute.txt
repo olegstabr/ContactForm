@@ -31,3 +31,4 @@ C:\Users\olejq\Documents\Visual Studio 2017\Projects\C# Projects\7semestr\Contac
 C:\Users\olejq\Documents\Visual Studio 2017\Projects\C# Projects\7semestr\ContactForm\ContactForm\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\olejq\Documents\Visual Studio 2017\Projects\C# Projects\7semestr\ContactForm\ContactForm\obj\Debug\ContactForm.dll
 C:\Users\olejq\Documents\Visual Studio 2017\Projects\C# Projects\7semestr\ContactForm\ContactForm\obj\Debug\ContactForm.pdb
+C:\Users\olejq\Documents\Visual Studio 2017\Projects\C# Projects\7semestr\ContactForm\ContactForm\obj\Debug\ContactForm.csprojResolveAssemblyReference.cache
