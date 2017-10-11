@@ -1,32 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="ContactForm.Contact" %>
-
-<!DOCTYPE html>
-
-<html>
-<head runat="server">
-    <title>Главная</title>
-    
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="~/css/materialize.css" />
-    <link rel="stylesheet" href="~/css/style.css" />
-    
-    <!-- Import jQuery -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="~/js/materialize.min.js"></script>
-          
-</head>
-<body>
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo">Лого</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#">Пункт 1</a></li>
-                <li><a href="#">Пункт 2</a></li>
-                <li><a href="#">Пункт 3</a></li>
-            </ul>
-        </div>
-    </nav>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Menu.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="ContactForm.Pages.Contact" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title>Авторизация</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="form1" runat="server">
         <div class="container">
             <div class="row">
@@ -66,5 +42,4 @@
             </div>
         </div>
     </form>
-</body>
-</html>
+</asp:Content>

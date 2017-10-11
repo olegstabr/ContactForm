@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Web;
 using System.Web.UI;
 
-namespace ContactForm
+namespace ContactForm.Pages
 {
     public partial class Contact : Page
     {
