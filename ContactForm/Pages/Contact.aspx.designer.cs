@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ContactForm.Pages {
+namespace ContactForm {
     
     
     public partial class Contact {

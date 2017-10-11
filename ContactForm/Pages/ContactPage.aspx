@@ -1,14 +1,20 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Menu.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="ContactForm.Pages.Contact" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <title>Авторизация</title>
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <form id="form1" runat="server">
-        <div class="container">
+﻿<%@ Page Title="Авторизация" Language="C#"  AutoEventWireup="true" CodeBehind="ContactPage.aspx.cs" Inherits="ContactForm.Pages.ContactPage" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    
+</head>
+<body>
+    <div>
+        <form id="form1" runat="server">
+            <div class="container">
             <div class="row">
                 <main>
                     <center>
-                        <div class="container">
+                        <div class="container_auth">
                             <div  class="z-depth-3 y-depth-3 x-depth-3 grey black-text lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px; margin-top: 0;">    
                                 <div class="section"><i class="mdi-alert-error red-text"></i></div>
                                 <h3>Авторизация</h3>
@@ -41,5 +47,10 @@
                 </main>
             </div>
         </div>
-    </form>
-</asp:Content>
+        </form>
+    </div>
+</body>
+</html>
+
+
+

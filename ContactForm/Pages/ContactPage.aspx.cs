@@ -3,7 +3,7 @@ using System.Web.UI;
 
 namespace ContactForm.Pages
 {
-    public partial class Contact : Page
+    public partial class ContactPage : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
