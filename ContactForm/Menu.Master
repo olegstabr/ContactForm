@@ -2,53 +2,49 @@
 
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="~/css/materialize.css" />
-    <link rel="stylesheet" href="~/css/style.css" />
-    
-    <!-- Import jQuery -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="~/js/materialize.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="~/css/stylesheet.css" rel="stylesheet" type="text/css" />
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo">Лого</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#">Пункт 1</a></li>
-                <li><a href="#">Пункт 2</a></li>
-                <li><a href="#">Пункт 3</a></li>
-            </ul>
-        </div>
-    </nav>
     <form id="form1" runat="server">
-        <div class="wrapper">
+        <div id="container">
+            <div id="header">
+                <div id="div_align">
+                    <h1 align="center">ЛАБОРАТОРНАЯ РАБОТА №2</h1>
+                </div>
+            </div>
 
-	        <div class="middle">
+            <div id="navigation">
+                <asp:Label runat="server" ID="Label3">Открытая директория:</asp:Label>
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
+            </div>  
 
-		        <div class="container">
-			        <main class="content">
-			            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-			            </asp:ContentPlaceHolder>
-			        </main><!-- .content -->
-		        </div><!-- .container-->
+            <div id="menu">
+                <asp:TreeView runat="server" ID="navigationTree" DataSourceID="SiteMap" ImageSet="Arrows">
+                    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD"/>
+                    <NodeStyle Font-Names="Verdana" Font-Size="12pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px"/>
+                    <ParentNodeStyle Font-Bold="False"/>
+                    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
+                </asp:TreeView>
+                <asp:SiteMapDataSource ID="SiteMap" runat="server" />
+            </div>
 
-		        <aside class="left-sidebar">
-			        <strong>Left Sidebar:</strong> Integer velit. Vestibulum nisi nunc, accumsan ut, vehicula sit amet, porta a, mi. Nam nisl tellus, placerat eget, posuere eget, egestas eget, dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In elementum urna a eros. Integer iaculis. Maecenas vel elit.
-		        </aside><!-- .left-sidebar -->
+            <div id="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
 
-	        </div><!-- .middle-->
+            <div id="clear"></div>
 
-        </div><!-- .wrapper -->
-
-        <footer class="footer">
-	        <strong>Footer:</strong> Mus elit Morbi mus enim lacus at quis Nam eget morbi. Et semper urna urna non at cursus dolor vestibulum neque enim. Tellus interdum at laoreet laoreet lacinia lacinia sed Quisque justo quis. Hendrerit scelerisque lorem elit orci tempor tincidunt enim Phasellus dignissim tincidunt. Nunc vel et Sed nisl Vestibulum odio montes Aliquam volutpat pellentesque. Ut pede sagittis et quis nunc gravida porttitor ligula.
-        </footer><!-- .footer -->
+            <div id="footer" align="center">
+                <asp:Label runat="server" ID="Label2" Font-Size="18">Copyright © 2017 Лабораторная работа №2 | Киселева Л., Стабровский О.</asp:Label>
+            </div>
+        </div>
     </form>
 </body>
 </html>

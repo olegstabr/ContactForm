@@ -10,7 +10,7 @@
 namespace ContactForm.Pages {
     
     
-    public partial class ResultPage {
+    public partial class Home {
         
         /// <summary>
         /// resultLabel control.
