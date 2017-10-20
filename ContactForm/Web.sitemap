@@ -4,6 +4,7 @@
     <siteMapNode url="~/Pages/Home.aspx" title="Главная" description="Главная страница" />
     <siteMapNode url="~/Pages/Test1.aspx" title="Тест1"  description="Тестовая страница 1" />
     <siteMapNode url="~/Pages/Test2.aspx" title="Тест2"  description="Тестовая страница 2" />
+    <siteMapNode url="~/Pages/Books.aspx" title="Книги"  description="Список книг" />
   </siteMapNode>
 </siteMap>
 

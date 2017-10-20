@@ -15,7 +15,7 @@
         <div id="container">
             <div id="header">
                 <div id="div_align">
-                    <h1 align="center">ЛАБОРАТОРНАЯ РАБОТА №2</h1>
+                    <h1 align="center">ЛАБОРАТОРНАЯ РАБОТА №2-3</h1>
                 </div>
             </div>
 
@@ -42,7 +42,7 @@
             <div id="clear"></div>
 
             <div id="footer" align="center">
-                <asp:Label runat="server" ID="Label2" Font-Size="18">Copyright © 2017 Лабораторная работа №2 | Киселева Л., Стабровский О.</asp:Label>
+                <asp:Label runat="server" ID="Label2" Font-Size="18">Copyright © 2017 Лабораторная работа №2-3 | Киселева Л., Стабровский О.</asp:Label>
             </div>
         </div>
     </form>
