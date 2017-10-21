@@ -113,6 +113,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Entity\BookEntity.cs" />
     <Compile Include="Menu.Master.cs">
       <DependentUpon>Menu.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

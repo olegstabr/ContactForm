@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using ContactForm.Entity;
+using Npgsql;
 
 namespace ContactForm.Service
 {
@@ -16,6 +20,8 @@ namespace ContactForm.Service
     // [System.Web.Script.Services.ScriptService]
     public class DataBaseService : System.Web.Services.WebService
     {
+        static string CONN_STRING = "server=localhost;user id=postgres;password=1234;database=POIS";
+
         [WebMethod]
         public string HelloWorld()
         {
@@ -23,24 +29,94 @@ namespace ContactForm.Service
         }
 
         [WebMethod]
-        public int Add(int x, int y)
+        public DataTable GetBooks()
         {
-            return x + y;
+            DataTable table = null;
+            string query = "SELECT * FROM BOOK";
+
+            using (NpgsqlConnection connection = new NpgsqlConnection(CONN_STRING))
+            {
+                try
+                {
+                    connection.Open();
+                    using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
+                    {
+
+                        NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(command);
+                        table = new DataTable();
+                        adapter.Fill(table);
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+            }
+
+            return table;
         }
+
         [WebMethod]
-        public int Sub(int x, int y)
+        public void AddBook(BookEntity book)
         {
-            return x - y;
+            string query = $"INSERT INTO BOOK(NAME, AUTHOR, YEAR, PUBLISH_HOUSE) VALUES('{book.Name}', '{book.Author}', {book.Year}, '{book.PublishHouse}')";
+            using (NpgsqlConnection connection = new NpgsqlConnection(CONN_STRING))
+            {
+                try
+                {
+                    connection.Open();
+                    using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+            }
         }
+
         [WebMethod]
-        public int Mul(int x, int y)
+        public void UpdateBook(BookEntity book)
         {
-            return x * y;
+            string query = $"UPDATE BOOK SET NAME = '{book.Name}', AUTHOR='{book.Author}', YEAR={book.Year}, PUBLISH_HOUSE='{book.PublishHouse}' WHERE ID = {book.ID}";
+            using (NpgsqlConnection connection = new NpgsqlConnection(CONN_STRING))
+            {
+                try
+                {
+                    connection.Open();
+                    using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+            }
         }
+
         [WebMethod]
-        public int Div(int x, int y)
+        public void DeleteBook(int id)
         {
-            return x / y;
+            string query = $"DELETE FROM BOOK  WHERE ID = {id}";
+            using (NpgsqlConnection connection = new NpgsqlConnection(CONN_STRING))
+            {
+                try
+                {
+                    connection.Open();
+                    using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+            }
         }
     }
 }
